@@ -11,6 +11,12 @@
                 // variables
                 const ITEM_CONTAINER_ID = '#item-container';
                 const PANEL_CONTAINER_ID = '#panel-container';
+                const EXPANDED_PANEL_POSITIONS = {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                }
 
                 // functions
                 const activatePanel = function (item) {
@@ -67,13 +73,7 @@
                 }
 
                 const expandPanel = function (active_panel) {
-                    let expanded_panel_positions = {
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        left: 0
-                    };
-                    active_panel.css(expanded_panel_positions);
+                    active_panel.css(EXPANDED_PANEL_POSITIONS);
                 }
 
                 const collapsePanel = function (active_panel, item_positions) {
